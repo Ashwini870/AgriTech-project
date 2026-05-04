@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasheri Rakshak | दशहरी रक्षक</title>
+    <link rel="stylesheet" href="style.css"
+        
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div>Dasheri<span>Shield</span></div>
+            <small>दशहरी रक्षक</small>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home<br><span class="hi">मुख्य पृष्ठ</span></a>
+            <a href="#inventory">My Godown<br><span class="hi">मेरा गोदाम</span></a>
+            <a href="#detect">Disease Check<br><span class="hi">रोग जाँच</span></a>
+            <a href="#market">Mandi Rates<br><span class="hi">मंडी भाव</span></a>
+            <a href="#" class="cta-btn">Logout<br><span class="hi">लॉग आउट</span></a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Protect Your Harvest</h1>
+        <h2>अपनी फसल और मुनाफा, दोनों बचाएं</h2>
+        <p>AI Disease Detection & Direct Selling for Malihabad Farmers</p>
+        
+        <div class="hero-buttons" id="detect">
+            <a href="#detect" class="hero-btn btn-primary">
+                <span>Check Disease 📷</span>
+                <span class="hi">कीड़ा/रोग जाँचें</span>
+            </a>
+            <a href="#inventory" class="hero-btn btn-secondary">
+                <span>Check Stock 📦</span>
+                <span class="hi">स्टॉक देखें</span>
+            </a>
+        </div>
+    </section>
+         <div class="section-header">
+            <h2>Dr. Dasheri: Disease Check <br><span class="hi">रोग पहचान और समाधान</span></h2>
+        </div>
+
+        <div class="detect-box">
+            <div class="upload-area" >
+                <div style="font-size: 3rem;">📷</div>
+                 <input type="file">
+            <br>
+                <h3>Upload Leaf Photo <span class="hi">पत्ती की फोटो डालें</span></h3>
+                <p style="color:#888;" onclick="simulateScan()">Click here to scan</p>
+            </div>
+
+            <div id="loading" style="display:none; margin-top:20px; color:var(--primary-green); font-weight:bold;">
+                Scanned... <br> <span class="hi">जाँच हो गई है...</span>
+            </div>
+       
+            <div id="result" class="result-box">
+                <h3>⚠️ Alert: Powdery Mildew <span class="hi" style="font-size:0.8em; margin-left:10px;">(पाउडरी मिलड्यू रोग)</span></h3>
+                <p><strong>Confidence:</strong> 94% Match</p>
+                <hr style="margin:10px 0; border:0; border-top:1px solid #ffcdd2;">
+                
+                <p><strong>Action Required / उपाय:</strong></p>
+                <ul style="margin-left:20px; margin-top:5px;">
+                    <li>Spray <strong>Wettable Sulfur</strong> (0.2%) immediately.</li>
+                    <li><span class="hi">तुरंत गंधक (Sulfur) कवकनाशी का छिड़काव करें।</span></li>
+                    <li>Prune infected leaves to stop spread.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="inventory">
+        <div class="section-header">
+            <h2>Post-Harvest Inventory <span>मेरा गोदाम (स्टॉक)</span></h2>
+            <p>Manage your picked mangoes. Take action before they rot.</p>
+        </div>
+
+        <div class="inventory-grid">
+            
+            <div class="inventory-card inv-critical">
+                <div class="inv-header">
+                    <div class="inv-title">
+                        <h3>Batch #102 - Dasheri</h3>
+                        <span class="hi">तोड़ाई: 3 दिन पहले (Harvested: 3 days ago)</span>
+                    </div>
+                    <div style="background:#ffebee; color:#c62828; padding:5px 10px; border-radius:15px; font-size:0.8rem; font-weight:bold;">
+                        High Risk ⚠
+                    </div>
+                </div>
+                <div>
+                    <strong>Quantity:</strong> 400 kg
+                    <br>
+                    <strong>Location:</strong> Open Shed (Farm)
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
+                    Shelf Life Remaining (खराब होने में समय): <strong>12 Hours</strong>
+                </div>
+                <div class="shelf-life-meter">
+                    <div class="life-fill" style="width: 15%; background-color: #D32F2F;"></div>
+                </div>
+
+                <div class="action-row">
+                    <button class="act-btn act-sell">
+                        Sell Instantly <br> <span class="hi">अभी बेचें (₹50/kg)</span>
+                    </button>
+                    <button class="act-btn" style="background:#eee; color:#999; cursor:not-allowed;" disabled>
+                        Store <br> <span class="hi">स्टोर नहीं कर सकते</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="inventory-card inv-safe">
+                <div class="inv-header">
+                    <div class="inv-title">
+                        <h3>Batch #104 - Chausa</h3>
+                        <span class="hi">तोड़ाई: आज सुबह (Harvested: Today)</span>
+                    </div>
+                    <div style="background:#e8f5e9; color:#2e7d32; padding:5px 10px; border-radius:15px; font-size:0.8rem; font-weight:bold;">
+                        Safe ✅
+                    </div>
+                </div>
+                <div>
+                    <strong>Quantity:</strong> 1200 kg
+                    <br>
+                    <strong>Location:</strong> Crates Packed
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
+                    Shelf Life Remaining: <strong>5 Days</strong>
+                </div>
+                <div class="shelf-life-meter">
+                    <div class="life-fill" style="width: 90%; background-color: #2E7D32;"></div>
+                </div>
+
+                <div class="action-row">
+                    <button class="act-btn act-sell">
+                        List Market <br> <span class="hi">बाज़ार में लगायें</span>
+                    </button>
+                    <button class="act-btn act-storage" onclick="alert('Booking request sent to Malihabad Cold Storage chain.')">
+                        Cold Storage <br> <span class="hi">कोल्ड स्टोरेज भेजें</span>
+                    </button>
+                </div>
+            </div>
+
+             <div class="inventory-card inv-risk">
+                <div class="inv-header">
+                    <div class="inv-title">
+                        <h3>Batch #103 - Dasheri</h3>
+                        <span class="hi">तोड़ाई: कल (Harvested: Yesterday)</span>
+                    </div>
+                    <div style="background:#fff3e0; color:#ef6c00; padding:5px 10px; border-radius:15px; font-size:0.8rem; font-weight:bold;">
+                        Moving Fast ⚡
+                    </div>
+                </div>
+                <div>
+                    <strong>Quantity:</strong> 800 kg
+                    <br>
+                    <strong>Location:</strong> Verandah
+                </div>
+                
+                <div style="margin-top: 10px; font-size: 0.85rem; color: #666;">
+                    Shelf Life Remaining: <strong>48 Hours</strong>
+                </div>
+                <div class="shelf-life-meter">
+                    <div class="life-fill" style="width: 50%; background-color: #FF9800;"></div>
+                </div>
+
+                <div class="action-row">
+                    <button class="act-btn act-sell">
+                        Sell Priority <br> <span class="hi">जल्दी बेचें</span>
+                    </button>
+                    <button class="act-btn act-storage">
+                        Processing <br> <span class="hi">जैम/पल्प के लिए दें</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" id="market">
+        <div class="section-header">
+            <h2>Market Rates <span>बाज़ार भाव</span></h2>
+            <p>Connect with buyers directly. No middleman commission.</p>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Buyer <br><span class="hi" style="font-weight:normal; font-size:0.8em">खरीदार</span></th>
+                        <th>Rate/Kg <br><span class="hi" style="font-weight:normal; font-size:0.8em">भाव</span></th>
+                        <th>Demand <br><span class="hi" style="font-weight:normal; font-size:0.8em">मांग</span></th>
+                        <th>Action <br><span class="hi" style="font-weight:normal; font-size:0.8em">कार्य</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>BigBasket</strong> <br><small>Premium Grade</small></td>
+                        <td class="price-up">₹75 <small>▲</small></td>
+                        <td>500 kg</td>
+                        <td><button class="cta-btn" style="padding: 5px 10px;">Accept <span class="hi">बेचें</span></button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lucknow Exports</strong> <br><small>Export Quality</small></td>
+                        <td class="price-up">₹90 <small>▲</small></td>
+                        <td>2000 kg</td>
+                        <td><button class="cta-btn" style="padding: 5px 10px;">Accept <span class="hi">बेचें</span></button></td>
+                    </tr>
+                    <tr>
+                        <td style="color:#777"><strong>Local Mandi</strong> <br><small>Standard</small></td>
+                        <td style="color:#777">₹35 <small>▼</small></td>
+                        <td>Any</td>
+                        <td><button style="padding: 5px 10px; border:1px solid #ccc; background:#eee; cursor:not-allowed;">Low Rate <span class="hi">कम भाव</span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   <footer class="simple-footer">
+    <h2>Dasheri<span>Shield</span> <small>दशहरी रक्षक</small></h2>
+    <p>Empowering Malihabad's Mango Farmers.</p>
+    <p class="copyright">&copy; 2026 Dasheri Shield | किसानों की सेवा में ⚡</p>
+</footer>
+
+ <script src="script.js"></script>
+   
+
+</body>
+</html>
